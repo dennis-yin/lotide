@@ -12,6 +12,10 @@ const eqArrays = function(arrOne, arrTwo) {
   }
 
   for (let i = 0; i < arrOne.length; i++) {
+    if (Array.isArray(arrOne[i]) && Array.isArray(arrTwo[i])) {
+      return eqArrays(arrOne[i], arrTwo[i]);
+    }
+
     if (arrOne[i] !== arrTwo[i]) {
       return false;
     }
@@ -20,7 +24,6 @@ const eqArrays = function(arrOne, arrTwo) {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, [2, [3, 4, 5]]], [1, [2, [3,4 , 5]]]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], ["1", "2", "3"]), false);
 assertEqual(eqArrays([1, 2, 3], [1, 3, 2]), false);
-// assertEqual(eqArrays(), );
