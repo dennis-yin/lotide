@@ -28,3 +28,5 @@ assertEqual(test["i"], 1);
 assertEqual(test["o"], 1);
 assertEqual(test["u"], 1);
 assertEqual(test["x"], undefined);
+
+module.exports = countLetters;

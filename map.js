@@ -30,6 +30,8 @@ const map = function(array, callback) {
   return results;
 }
 
+module.exports = map;
+
 // Testing our map function
 assertArraysEqual(map(words, word => word[word.length - 1]), ['d', 'l', 'o', 'r', 'm']);
 assertArraysEqual(map(words, word => word + 'ay'), ["grounday", "controlay", "toay", "majoray", "tomay"]);

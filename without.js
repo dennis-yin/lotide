@@ -34,6 +34,8 @@ const without = function(source, itemsToRemove) {
   return output;
 };
 
+module.exports = without;
+
 // assertArraysEqual(without([1,2,3],[5]), [1,2,3]);
 // assertArraysEqual(without([1,2,3],[]), [1,2,3]);
 // assertArraysEqual(without([1,2,3],[2]), [1,3]);

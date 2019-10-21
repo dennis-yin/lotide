@@ -9,6 +9,7 @@ const middle = function(arr) {
   } else {
     result.push(arr[midIndex - 1], arr[midIndex]);
   }
+  
   return result;
 };
 
